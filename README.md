@@ -27,3 +27,10 @@ Here is the solution:
 # Join the network
 
 Ask one of the admins on the discord server !
+
+
+Once you have the ca.crt, host.crt and config.yaml files, copy them to `/etc/nebula`
+
+Then, start the nebula service.
+
+Make sure you disable the right ports on your machine !
