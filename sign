@@ -45,3 +45,5 @@ echo "wait for $1 (ip = $ip)"
 get_content | nc -l 80
 
 echo "$ip:$1" >> host_names
+
+rm host.zip
