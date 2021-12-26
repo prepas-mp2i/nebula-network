@@ -18,7 +18,7 @@ ip=$(awk -F':' -f add_host.awk host_names) || error "already registered"
 
 
 # create certificate
-nebula-cert sign -name "$1" -ip "192.168.100.$ip/24" -out-crt host.crt -out-key host.key
+nebula-cert sign -name "$1" -ip "192.168.42.$ip/24" -out-crt host.crt -out-key host.key
 
 
 
