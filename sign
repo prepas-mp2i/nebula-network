@@ -1,6 +1,7 @@
 #!/bin/bash
 
 HOST_FILE="/var/nebula/hosts"
+PORT="8000"
 
 set -e
 
@@ -44,7 +45,7 @@ get_content(){
 echo "wait for $1 (ip = $ip)"
 
 # send via http
-get_content | nc -l 80
+get_content | nc -l $PORT
 
 echo "$ip:$1" >> $HOST_FILE
 
