@@ -17,7 +17,7 @@ export NAME=$1
 
 
 # awk program to get next valid ip
-ip=$(awk -F':' -f add_host.awk host_names) || error "already registered"
+ip=$(awk -F':' -f add_host.awk $HOST_FILE) || error "already registered"
 
 
 # create certificate
