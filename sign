@@ -1,5 +1,7 @@
 #!/bin/bash
 
+HOST_FILE="/var/hosts"
+
 set -e
 
 error(){
@@ -44,6 +46,6 @@ echo "wait for $1 (ip = $ip)"
 # send via http
 get_content | nc -l 80
 
-echo "$ip:$1" >> host_names
+echo "$ip:$1" >> $HOST_FILE
 
 rm host.zip
