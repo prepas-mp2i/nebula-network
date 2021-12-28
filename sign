@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HOST_FILE="/var/hosts"
+HOST_FILE="/var/nebula/hosts"
 
 set -e
 
