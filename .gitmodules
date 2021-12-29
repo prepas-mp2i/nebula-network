@@ -1,0 +1,3 @@
+[submodule "nebula-server-directories"]
+	path = nebula-server-directories
+	url = https://github.com/ajayat/nebula-server-directories
