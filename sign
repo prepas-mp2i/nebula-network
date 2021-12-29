@@ -1,7 +1,6 @@
 #!/bin/bash
 
 HOST_FILE="/var/nebula/hosts"
-PORT="8000"
 
 set -e
 
@@ -44,9 +43,15 @@ get_content(){
 
 echo "wait for $1 (ip = $ip)"
 
+PORT=$((8000+$ip))
+
+echo -e "to get the file:\n"
+echo "wget 159.89.12.238:$PORT/nebula.zip"
+
 # send via http
 get_content | nc -l $PORT
 
+# TODO: add mail address to file `hosts`
 echo "$ip:$1" >> $HOST_FILE
 
 rm host.zip
